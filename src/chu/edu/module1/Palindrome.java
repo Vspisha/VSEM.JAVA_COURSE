@@ -55,6 +55,13 @@ public class Palindrome {
         System.out.println("The third way :");
         System.out.println(text + " - is a palindome -  " + isPalindrom3(text));
 
+      /*  The first way :
+        Мох у азиата и за ухом - is a palindome -  true
+        The second way :
+        Мох у азиата и за ухом - is a palindome -  true
+        The third way :
+        Мох у азиата и за ухом - is a palindome -  true */
+
     }
 }
 

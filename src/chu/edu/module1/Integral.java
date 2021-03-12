@@ -31,5 +31,7 @@ public class Integral {
     public static void main(String[] args) {
         System.out.println("Clipped sinusoid area : " + getIntegral(1));
     }
+
+    /*Clipped sinusoid area : 0.304149893747447*/
 }
 
