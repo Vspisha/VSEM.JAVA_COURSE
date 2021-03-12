@@ -42,7 +42,7 @@ public class Palindrome {
         text = text.toLowerCase();
         StringBuilder sb = new StringBuilder(text);
         String reversed = sb.reverse().toString();
-        return (reversed.equals(text)) ? true : false;
+        return (reversed.equals(text));
     }
 
 

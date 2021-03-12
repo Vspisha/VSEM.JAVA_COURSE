@@ -34,7 +34,7 @@ public class AboutMe {
         System.out.println("The first letter of my name is " + sign + ".");
 
         boolean isItTrue = true;
-        System.out.println("Today I drank 5 cups ot tea. It is " + isItTrue + ".");
+        System.out.println("Today I had drank 5 cups ot tea. It is " + isItTrue + ".");
 
         String thanks = "Thanks for reading!";
         System.out.println(thanks);
