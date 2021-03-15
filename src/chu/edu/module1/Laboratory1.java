@@ -54,10 +54,10 @@ public class Laboratory1 {
         }
 
         // 4 Задание
-        int counterC = 0;
+        int counterLetterC = 0;
         for (int i = 0; i < distincts.length; i++) {
             if (distincts[i].startsWith("C") || distincts[i].startsWith("C")) {
-                counterC++;
+                counterLetterC++;
             }
         }
 
@@ -80,7 +80,7 @@ public class Laboratory1 {
         System.out.println("The longest word is: " + longestWord); //The longest word is: interestinglooking
         System.out.println("Lines with the word Harry  " + counter);//Lines with the word Harry  1326
          System.out.println("Number of distinct words: " + distincts.length); //6000 distincts words
-         System.out.println("Number of distinct words begin from the letter C: " + counterC);
+         System.out.println("Number of distinct words begin from the letter C: " + counterLetterC);
          System.out.println("Number of Hash matches : " + counterHashes); // Number of Hash matches : 0
          // Number of distinct words begin from the letter C: 80
 
