@@ -51,7 +51,6 @@ public class Laboratory1 {
         String[] distincts = stringOfDistincts.split(" ");
         for (int i = 0; i < 6000; i++) {
             // System.out.println(distincts[i]);
-
         }
 
         // 4 Задание
@@ -80,7 +79,7 @@ public class Laboratory1 {
 
         System.out.println("The longest word is: " + longestWord); //The longest word is: interestinglooking
         System.out.println("Lines with the word Harry  " + counter);//Lines with the word Harry  1326
-         //System.out.println("Number of distinct words: " + distincts.length); //6000 distincts words
+         System.out.println("Number of distinct words: " + distincts.length); //6000 distincts words
          System.out.println("Number of distinct words begin from the letter C: " + counterC);
          System.out.println("Number of Hash matches : " + counterHashes); // Number of Hash matches : 0
          // Number of distinct words begin from the letter C: 80
