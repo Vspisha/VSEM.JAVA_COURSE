@@ -62,9 +62,10 @@ public class Laboratory1 {
         }
 
         //5 Задание.
-        int[] Hash = new int[distincts.length];
-        for (int i = 0; i < distincts.length; i++) {
-        //System.out.println(distincts[i].hashCode());
+        int[] hash = new int[distincts.length];
+        for (int i = 0; i < hash.length; i++) {
+            hash[i] = distincts[i].hashCode();
+        System.out.println(distincts[i].hashCode());
 
         }
         // 6. Count the intersections of hashes.
