@@ -3,6 +3,7 @@ package chu.edu.module1;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Locale;
 
 import static jdk.nashorn.internal.objects.NativeMath.max;
@@ -65,16 +66,23 @@ public class Laboratory1 {
         int[] hash = new int[distincts.length];
         for (int i = 0; i < hash.length; i++) {
             hash[i] = distincts[i].hashCode();
-        System.out.println(distincts[i].hashCode());
+        //System.out.println(distincts[i].hashCode());
 
         }
         // 6. Count the intersections of hashes.
-        // Не понимаю как это сделать .
+        Arrays.sort(hash);
+        int counterHashes = 0;
+        for (int i = 0; i < hash.length - 1; i++) {
+            if (hash[i] == hash[i+1]) {
+                counterHashes++;
+            }
+        }
 
         System.out.println("The longest word is: " + longestWord); //The longest word is: interestinglooking
         System.out.println("Lines with the word Harry  " + counter);//Lines with the word Harry  1326
-         System.out.println("Number of distinct words: " + distincts.length); //6000 distincts words
+         //System.out.println("Number of distinct words: " + distincts.length); //6000 distincts words
          System.out.println("Number of distinct words begin from the letter C: " + counterC);
+         System.out.println("Number of Hash matches : " + counterHashes); // Number of Hash matches : 0
          // Number of distinct words begin from the letter C: 80
 
     }
