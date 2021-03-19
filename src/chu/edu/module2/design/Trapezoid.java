@@ -47,6 +47,7 @@ public class Trapezoid {
     public void setSideD(double sideD) {
         this.sideD = sideD;
     }
+
     // Constructors
     public Trapezoid() {
     }
@@ -57,41 +58,52 @@ public class Trapezoid {
         this.sideC = sideC;
         this.sideD = sideD;
     }
+
     //metod1 - Perimeter
-    public double getPerimeter(){
+    public double getPerimeter() {
         return this.getSideA() + this.getSideB() + this.getSideC() + this.getSideD();
     }
+
     //metod2 - Semi-Perimeter
-    public double getHalfPerimeter(){
-        return (getPerimeter() / 2 );
+    public double getHalfPerimeter() {
+        return (getPerimeter() / 2);
     }
+
     //metod3 - Midlane
-    public double getMidLane(){
-        return (this.getSideB() + this.getSideD()) / 2 ;
+    public double getMidLane() {
+        return (this.getSideB() + this.getSideD()) / 2;
     }
+
     //metod4 - Area
-    public double getArea(){
-        return  (this.getSideD() + this.getSideB() / (this.getSideD() - this.getSideB()) *
+    public double getArea() {
+        return (this.getSideD() + this.getSideB() / (this.getSideD() - this.getSideB()) *
                 Math.sqrt((getHalfPerimeter() - this.getSideD()) * (getHalfPerimeter() - this.getSideB()) *
-                (getHalfPerimeter() - this.getSideD() - this.getSideA()) * (getHalfPerimeter() - this.getSideD() - this.getSideC())));
+                        (getHalfPerimeter() - this.getSideD() - this.getSideA())
+                        * (getHalfPerimeter() - this.getSideD() - this.getSideC())));
     }
+
     //metod5 - Hight
     public double getHight() {
         return (getArea() / getMidLane());
     }
+
     //equals() method
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Trapezoid trapezoid = (Trapezoid) o;
-        return Double.compare(trapezoid.getSideA(), getSideA()) == 0 && Double.compare(trapezoid.getSideB(), getSideB()) == 0 && Double.compare(trapezoid.getSideC(), getSideC()) == 0 && Double.compare(trapezoid.getSideD(), getSideD()) == 0;
+        return Double.compare(trapezoid.getSideA(), getSideA()) == 0 && Double.compare(trapezoid.getSideB(),
+                getSideB()) == 0 && Double.compare(trapezoid.getSideC(),
+                getSideC()) == 0 && Double.compare(trapezoid.getSideD(), getSideD()) == 0;
     }
+
     // hashCode() method
     @Override
     public int hashCode() {
         return Objects.hash(getSideA(), getSideB(), getSideC(), getSideD());
     }
+
     // toString() method
     @Override
     public String toString() {
