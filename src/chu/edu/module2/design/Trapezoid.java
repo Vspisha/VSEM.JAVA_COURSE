@@ -59,7 +59,7 @@ public class Trapezoid {
     }
     //metod1 - Perimeter
     public double getPerimeter(){
-        return this.sideA + this.sideB + sideC + this.sideD;
+        return this.getSideA() + this.getSideB() + this.getSideC() + this.getSideD();
     }
     //metod2 - Semi-Perimeter
     public double getHalfPerimeter(){
@@ -67,13 +67,13 @@ public class Trapezoid {
     }
     //metod3 - Midlane
     public double getMidLane(){
-        return (this.sideB + this.sideD) / 2 ;
+        return (this.getSideB() + this.getSideD()) / 2 ;
     }
     //metod4 - Area
     public double getArea(){
-        return  (this.sideD + this.sideB) / (this.sideD - sideB) *
-                Math.sqrt((getHalfPerimeter() - this.sideD) * (getHalfPerimeter() - this.sideB) *
-                (getHalfPerimeter() - this.sideD - this.sideA) * (getHalfPerimeter() - this.sideD - this.sideC));
+        return  (this.getSideD() + this.getSideB() / (this.getSideD() - this.getSideB()) *
+                Math.sqrt((getHalfPerimeter() - this.getSideD()) * (getHalfPerimeter() - this.getSideB()) *
+                (getHalfPerimeter() - this.getSideD() - this.getSideA()) * (getHalfPerimeter() - this.getSideD() - this.getSideC())));
     }
     //metod5 - Hight
     public double getHight() {
