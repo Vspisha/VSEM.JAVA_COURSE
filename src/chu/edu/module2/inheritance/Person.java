@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Person {
     private String firstName;
     private String lastName;
-    private String patronynicName;
+    private String patronymicName;
     private String gender;
     private LocalDate dateOfBirth;
     private String nationality;
@@ -30,13 +30,13 @@ public class Person {
     public Person() {
     }
 
-    public Person(String firstName, String lastName, String patronynicName, String gender,
+    public Person(String firstName, String lastName, String patronymicName, String gender,
                   LocalDate dateOfBirth, String nationality, String citizenship,
                   String country, String town, String street, String houseNumber,
                   int flatNumber, String maritalStatus, boolean previousСonviction) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.patronynicName = patronynicName;
+        this.patronymicName = patronymicName;
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
         this.nationality = nationality;
@@ -68,12 +68,12 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public String getPatronynicName() {
-        return patronynicName;
+    public String getPatronymicName() {
+        return patronymicName;
     }
 
-    public void setPatronynicName(String patronynicName) {
-        this.patronynicName = patronynicName;
+    public void setPatronymicName(String patronymicName) {
+        this.patronymicName = patronymicName;
     }
 
     public String getGender() {
@@ -175,7 +175,7 @@ public class Person {
                 && isPreviousСonviction() == person.isPreviousСonviction()
                 && getFirstName().equals(person.getFirstName())
                 && getLastName().equals(person.getLastName())
-                && getPatronynicName().equals(person.getPatronynicName())
+                && getPatronymicName().equals(person.getPatronymicName())
                 && getGender().equals(person.getGender())
                 && getDateOfBirth().equals(person.getDateOfBirth())
                 && getNationality().equals(person.getNationality())
@@ -189,7 +189,7 @@ public class Person {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFirstName(), getLastName(), getPatronynicName(),
+        return Objects.hash(getFirstName(), getLastName(), getPatronymicName(),
                 getGender(), getDateOfBirth(), getNationality(), getCitizenship(),
                 getCountry(), getTown(), getStreet(), getHouseNumber(),
                 getFlatNumber(), getMaritalStatus(), isPreviousСonviction());
@@ -200,7 +200,7 @@ public class Person {
         return "Person{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", patronynicName='" + patronynicName + '\'' +
+                ", patronynicName='" + patronymicName + '\'' +
                 ", gender='" + gender + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", nationality='" + nationality + '\'' +

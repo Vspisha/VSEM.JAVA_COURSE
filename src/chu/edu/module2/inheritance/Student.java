@@ -45,7 +45,7 @@ public class Student extends Person{
         this.groupLeader = groupLeader;
     }
 
-    public Student(String firstName, String lastName, String patronynicName,
+    public Student(String firstName, String lastName, String patronymicName,
                    String gender, LocalDate dateOfBirth, String nationality,
                    String citizenship, String country, String town, String street,
                    String houseNumber, int flatNumber, String maritalStatus,
@@ -56,7 +56,7 @@ public class Student extends Person{
                    boolean livesInDormitory, String learningType,
                    String learningForm, boolean groupLeader) {
 
-        super(firstName, lastName, patronynicName, gender, dateOfBirth,
+        super(firstName, lastName, patronymicName, gender, dateOfBirth,
                 nationality, citizenship, country, town, street, houseNumber, flatNumber,
                 maritalStatus, previousСonviction);
 
