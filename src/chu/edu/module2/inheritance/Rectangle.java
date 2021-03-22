@@ -41,6 +41,13 @@ public class Rectangle {
         this.width = width;
     }
 
+    // getArea metod
+
+    public int getAreaRectangle(){
+    return this.getLength() * this.getWidth()  ;
+    }
+
+
     // toString , hashCode , equals
 
     @Override

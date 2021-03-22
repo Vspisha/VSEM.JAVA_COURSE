@@ -70,6 +70,26 @@ public class Wall extends Rectangle  {
         isWarmed = warmed;
     }
 
+    //the cost of the wall
+    public int wallPrice(){
+                int getPrice = 0;
+                if (this.isInner() == true) {
+                getPrice =  getAreaRectangle() * 60 * 2;
+                }
+               else if (this.isWarmed() == true){
+                getPrice =  getAreaRectangle() * 60 * 3;
+                }
+               else if (this.isWarmed() && this.isInner() == true) {
+                    getPrice =  getAreaRectangle() * 60 * 3 * 2;
+                }
+               else if (this.isWarmed() && this.isInner() == false) {
+                    getPrice =  getAreaRectangle() * 60 ;
+                   }
+
+                return getPrice;
+    }
+
+
     // toString , hashCode , equals
 
 
