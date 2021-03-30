@@ -288,11 +288,6 @@ public class Student1 extends Person {
             return this;
         }
 
-        /* String firstName, String lastName, String patronymicName,
-         String gender, LocalDate dateOfBirth, String nationality,
-         String citizenship, String country, String town, String street,
-         String houseNumber, int flatNumber, String maritalStatus,
-         boolean previousСonviction*/
         public Builder setFirstName(String firstName) {
             studentToBuild.setFirstName(firstName);
             return this;
