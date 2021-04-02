@@ -1,0 +1,343 @@
+package chu.edu.module3;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+
+/**
+ * @author Radyslav Churkin
+ * @version 1.0.0
+ * @project VSEM
+ * @class JavaList
+ * @since 02.04.2021 - 16.05
+ **/
+public class JavaLists {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int r1 = random.nextInt(1000);
+
+        System.out.println("------------------LINKED LIST--------------------------------  ");
+        List<Integer> linkedList = new LinkedList<>();
+        int indexOfCenterL = linkedList.size() / 2;
+
+        // CREATE LIST 100000
+
+        LocalDateTime start = LocalDateTime.now();
+        for (int i = 0; i < 100000; i++) {
+            linkedList.add(random.nextInt(1000));
+        }
+        LocalDateTime finish = LocalDateTime.now();
+
+        int duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Create duration : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        //----------------- INSERT-----------------------
+
+        //HEAD
+
+         start = LocalDateTime.now();
+        for (int i = 0; i < 1000; i++) {
+            linkedList.add(random.nextInt(1000));
+        }
+         finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Insert on the  beginning  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        //MID
+
+        start = LocalDateTime.now();
+        for (int i = indexOfCenterL; i < indexOfCenterL + 1000; i++) {
+            linkedList.add(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Insert on the  middle  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        // TAIl
+
+        start = LocalDateTime.now();
+        for (int i = linkedList.size() ; i > linkedList.size() - 2000 ; i--) {
+            linkedList.add(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Insert on the end  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        //------------------UPDATE-----------------
+
+        // HEAD
+
+        start = LocalDateTime.now();
+        for (int i = 0; i < 1000; i++) {
+            linkedList.set(i,random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Update from the  beginning  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        // MID
+
+        start = LocalDateTime.now();
+        for (int i = indexOfCenterL; i < indexOfCenterL + 1000; i++) {
+            linkedList.set(i,random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Update from the  middle  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        //TAIL
+
+        start = LocalDateTime.now();
+        for (int i = linkedList.size() - 1000; i < linkedList.size() ; i++) {
+            linkedList.set(i,random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Update from the  end  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        //------------------DELETE-----------------
+
+        //HEAD
+
+        start = LocalDateTime.now();
+        for (int i = 0; i < 1000; i++) {
+            linkedList.remove(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Delete from the  beginning  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());;
+
+        //MID
+
+        start = LocalDateTime.now();
+        for (int i = indexOfCenterL; i < indexOfCenterL + 1000; i++) {
+            linkedList.remove(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Delete from the  middle  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+        //TAIL
+
+        start = LocalDateTime.now();
+        for (int i = linkedList.size() - 2000; i < linkedList.size() ; i++) {
+            linkedList.remove(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Delete from the  end  : " + duration + " msec");
+        System.out.println("ListSize now = " + linkedList.size());
+
+
+        System.out.println("------------------ARRAY LIST--------------------------------  ");
+        List<Integer> arrayList = new ArrayList<>();
+        int indexOfCenterA = arrayList.size() / 2;
+
+        // CREATE LIST 100000
+
+         start = LocalDateTime.now();
+        for (int i = 0; i < 100000; i++) {
+            arrayList.add(random.nextInt(1000));
+        }
+         finish = LocalDateTime.now();
+
+         duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Create duration : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        //----------------- INSERT-----------------------
+
+        //HEAD
+
+        start = LocalDateTime.now();
+        for (int i = 0; i < 1000; i++) {
+            arrayList.add(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Insert on the  beginning  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        //MID
+
+        start = LocalDateTime.now();
+        for (int i = indexOfCenterA; i < indexOfCenterA + 1000; i++) {
+            arrayList.add(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Insert on the  middle  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        // TAIl
+
+        start = LocalDateTime.now();
+        for (int i = arrayList.size() ; i > arrayList.size() - 2000 ; i--) {
+            arrayList.add(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Insert on the end  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        //------------------UPDATE-----------------
+
+        // HEAD
+
+        start = LocalDateTime.now();
+        for (int i = 0; i < 1000; i++) {
+            arrayList.set(i,random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Update from the  beginning  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        // MID
+
+        start = LocalDateTime.now();
+        for (int i = indexOfCenterA; i < indexOfCenterA + 1000; i++) {
+            arrayList.set(i,random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Update from the  middle  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        //TAIL
+
+        start = LocalDateTime.now();
+        for (int i = arrayList.size() - 1000; i < arrayList.size() ; i++) {
+            arrayList.set(i,random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Update from the  end  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        //------------------DELETE-----------------
+
+        //HEAD
+
+        start = LocalDateTime.now();
+        for (int i = 0; i < 1000; i++) {
+            arrayList.remove(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Delete from the  beginning  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());;
+
+        //MID
+
+        start = LocalDateTime.now();
+        for (int i = indexOfCenterA; i < indexOfCenterA + 1000; i++) {
+            arrayList.remove(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Delete from the  middle  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+        //TAIL
+
+        start = LocalDateTime.now();
+        for (int i = arrayList.size() - 2000; i < arrayList.size() ; i++) {
+            arrayList.remove(random.nextInt(1000));
+        }
+        finish = LocalDateTime.now();
+
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        System.out.println("Delete from the  end  : " + duration + " msec");
+        System.out.println("ListSize now = " + arrayList.size());
+
+     /*
+
+      -----------ARRAY LIST--------------------------------------------LINKED LIST--------------------------------
+        Create duration : 9 msec                               Create duration : 56 msec
+        ListSize now = 100000                                  ListSize now = 100000
+       --------------------------------------INSERT--------------------------------------------------------------
+        Insert on the  beginning  : 0 msec                     Insert on the  beginning  : 0 msec
+        ListSize now = 101000                                  ListSize now = 101000
+        Insert on the  middle  : 1 msec                        Insert on the  middle  : 0 msec
+        ListSize now = 102000                                  ListSize now = 102000
+        Insert on the end  : 0 msec                            Insert on the end  : 0 msec
+        ListSize now = 103000                                  ListSize now = 103000
+        --------------------------------------UPDATE-------------------------------------------------------------
+        Update from the  beginning  : 0 msec                   Update from the  beginning  : 6 msec
+        ListSize now = 103000                                  ListSize now = 103000
+        Update from the  middle  : 0 msec                      Update from the  middle  : 5 msec
+        ListSize now = 103000                                  ListSize now = 103000
+        Update from the  end  : 0 msec                         Update from the  end  : 5 msec
+        ListSize now = 103000                                  ListSize now = 103000
+        --------------------------------------DELETE--------------------------------------------------------------
+        Delete from the  beginning  : 21 msec                  Delete from the  beginning  : 3 msec
+        ListSize now = 102000                                  ListSize now = 102000
+        Delete from the  middle  : 16 msec                     Delete from the  middle  : 2 msec
+        ListSize now = 101000                                  ListSize now = 101000
+        Delete from the  end  : 16 msec                        Delete from the  end  : 2 msec
+        ListSize now = 100000                                  ListSize now = 100000
+
+
+                        CONCLUSIONS : Linked list is a better choice than the Array list when
+                        you want to remove something from the list but worse in all other operations.
+
+
+         */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
