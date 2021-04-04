@@ -23,7 +23,7 @@ public class JavaLists {
         List<Integer> linkedList = new LinkedList<>();
         int indexOfCenterL = linkedList.size() / 2;
 
-        // CREATE LIST 100000
+        // CREATE LIST
 
         LocalDateTime start = LocalDateTime.now();
         for (int i = 0; i < 100000; i++) {
@@ -39,11 +39,11 @@ public class JavaLists {
 
         //HEAD
 
-         start = LocalDateTime.now();
+        start = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(random.nextInt(1000));
+            linkedList.add(0,random.nextInt(1000));
         }
-         finish = LocalDateTime.now();
+        finish = LocalDateTime.now();
 
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
         System.out.println("Insert on the  beginning  : " + duration + " msec");
@@ -52,8 +52,8 @@ public class JavaLists {
         //MID
 
         start = LocalDateTime.now();
-        for (int i = indexOfCenterL; i < indexOfCenterL + 1000; i++) {
-            linkedList.add(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            linkedList.add(indexOfCenterL,random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -64,8 +64,8 @@ public class JavaLists {
         // TAIl
 
         start = LocalDateTime.now();
-        for (int i = linkedList.size() ; i > linkedList.size() - 2000 ; i--) {
-            linkedList.add(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            linkedList.add(linkedList.size() - 1 ,random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -79,7 +79,7 @@ public class JavaLists {
 
         start = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.set(i,random.nextInt(1000));
+            linkedList.set(0, random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -90,8 +90,9 @@ public class JavaLists {
         // MID
 
         start = LocalDateTime.now();
-        for (int i = indexOfCenterL; i < indexOfCenterL + 1000; i++) {
-            linkedList.set(i,random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            linkedList.set(indexOfCenterL, random.nextInt(1000));
+            indexOfCenterL++;
         }
         finish = LocalDateTime.now();
 
@@ -102,8 +103,8 @@ public class JavaLists {
         //TAIL
 
         start = LocalDateTime.now();
-        for (int i = linkedList.size() - 1000; i < linkedList.size() ; i++) {
-            linkedList.set(i,random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            linkedList.set(linkedList.size() - 1000, random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -117,19 +118,20 @@ public class JavaLists {
 
         start = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.remove(random.nextInt(1000));
+            linkedList.remove(0);
         }
         finish = LocalDateTime.now();
 
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
         System.out.println("Delete from the  beginning  : " + duration + " msec");
-        System.out.println("ListSize now = " + linkedList.size());;
+        System.out.println("ListSize now = " + linkedList.size());
+
 
         //MID
 
         start = LocalDateTime.now();
-        for (int i = indexOfCenterL; i < indexOfCenterL + 1000; i++) {
-            linkedList.remove(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            linkedList.remove(indexOfCenterL);
         }
         finish = LocalDateTime.now();
 
@@ -140,8 +142,8 @@ public class JavaLists {
         //TAIL
 
         start = LocalDateTime.now();
-        for (int i = linkedList.size() - 2000; i < linkedList.size() ; i++) {
-            linkedList.remove(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            linkedList.remove(linkedList.size() - 1);
         }
         finish = LocalDateTime.now();
 
@@ -156,13 +158,13 @@ public class JavaLists {
 
         // CREATE LIST 100000
 
-         start = LocalDateTime.now();
+        start = LocalDateTime.now();
         for (int i = 0; i < 100000; i++) {
             arrayList.add(random.nextInt(1000));
         }
-         finish = LocalDateTime.now();
+        finish = LocalDateTime.now();
 
-         duration = (int) ChronoUnit.MILLIS.between(start, finish);
+        duration = (int) ChronoUnit.MILLIS.between(start, finish);
         System.out.println("Create duration : " + duration + " msec");
         System.out.println("ListSize now = " + arrayList.size());
 
@@ -172,7 +174,7 @@ public class JavaLists {
 
         start = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(random.nextInt(1000));
+            arrayList.add(0,random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -183,8 +185,8 @@ public class JavaLists {
         //MID
 
         start = LocalDateTime.now();
-        for (int i = indexOfCenterA; i < indexOfCenterA + 1000; i++) {
-            arrayList.add(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            arrayList.add(indexOfCenterA,random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -195,8 +197,8 @@ public class JavaLists {
         // TAIl
 
         start = LocalDateTime.now();
-        for (int i = arrayList.size() ; i > arrayList.size() - 2000 ; i--) {
-            arrayList.add(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            arrayList.add(arrayList.size() - 1,random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -210,7 +212,7 @@ public class JavaLists {
 
         start = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.set(i,random.nextInt(1000));
+            arrayList.set(0, random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -221,8 +223,9 @@ public class JavaLists {
         // MID
 
         start = LocalDateTime.now();
-        for (int i = indexOfCenterA; i < indexOfCenterA + 1000; i++) {
-            arrayList.set(i,random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            arrayList.set(indexOfCenterA, random.nextInt(1000));
+            indexOfCenterA++;
         }
         finish = LocalDateTime.now();
 
@@ -233,8 +236,8 @@ public class JavaLists {
         //TAIL
 
         start = LocalDateTime.now();
-        for (int i = arrayList.size() - 1000; i < arrayList.size() ; i++) {
-            arrayList.set(i,random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            arrayList.set(arrayList.size() - 1, random.nextInt(1000));
         }
         finish = LocalDateTime.now();
 
@@ -248,19 +251,20 @@ public class JavaLists {
 
         start = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            arrayList.remove(random.nextInt(1000));
+            arrayList.remove(0);
         }
         finish = LocalDateTime.now();
 
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
         System.out.println("Delete from the  beginning  : " + duration + " msec");
-        System.out.println("ListSize now = " + arrayList.size());;
+        System.out.println("ListSize now = " + arrayList.size());
+        ;
 
         //MID
 
         start = LocalDateTime.now();
-        for (int i = indexOfCenterA; i < indexOfCenterA + 1000; i++) {
-            arrayList.remove(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            arrayList.remove(indexOfCenterA);
         }
         finish = LocalDateTime.now();
 
@@ -271,8 +275,8 @@ public class JavaLists {
         //TAIL
 
         start = LocalDateTime.now();
-        for (int i = arrayList.size() - 2000; i < arrayList.size() ; i++) {
-            arrayList.remove(random.nextInt(1000));
+        for (int i = 0; i < 1000; i++) {
+            arrayList.remove(arrayList.size() - 1);
         }
         finish = LocalDateTime.now();
 
@@ -280,63 +284,38 @@ public class JavaLists {
         System.out.println("Delete from the  end  : " + duration + " msec");
         System.out.println("ListSize now = " + arrayList.size());
 
-     /*
 
+        /*
       -----------ARRAY LIST--------------------------------------------LINKED LIST--------------------------------
-        Create duration : 9 msec                               Create duration : 56 msec
+        Create duration : 16 msec                               Create duration : 71 msec
         ListSize now = 100000                                  ListSize now = 100000
        --------------------------------------INSERT--------------------------------------------------------------
-        Insert on the  beginning  : 0 msec                     Insert on the  beginning  : 0 msec
+        Insert on the  beginning  : 40 msec                     Insert on the  beginning  : 0 msec
         ListSize now = 101000                                  ListSize now = 101000
-        Insert on the  middle  : 1 msec                        Insert on the  middle  : 0 msec
+        Insert on the  middle  : 17 msec                        Insert on the  middle  : 1 msec
         ListSize now = 102000                                  ListSize now = 102000
-        Insert on the end  : 0 msec                            Insert on the end  : 0 msec
+        Insert on the end  : 1 msec                            Insert on the end  : 0 msec
         ListSize now = 103000                                  ListSize now = 103000
         --------------------------------------UPDATE-------------------------------------------------------------
-        Update from the  beginning  : 0 msec                   Update from the  beginning  : 6 msec
+        Update from the  beginning  : 0 msec                   Update from the  beginning  : 1 msec
         ListSize now = 103000                                  ListSize now = 103000
-        Update from the  middle  : 0 msec                      Update from the  middle  : 5 msec
+        Update from the  middle  : 0 msec                      Update from the  middle  : 0 msec
         ListSize now = 103000                                  ListSize now = 103000
-        Update from the  end  : 0 msec                         Update from the  end  : 5 msec
+        Update from the  end  : 1 msec                         Update from the  end  : 15 msec
         ListSize now = 103000                                  ListSize now = 103000
         --------------------------------------DELETE--------------------------------------------------------------
-        Delete from the  beginning  : 21 msec                  Delete from the  beginning  : 3 msec
+        Delete from the  beginning  : 23 msec                  Delete from the  beginning  : 0 msec
         ListSize now = 102000                                  ListSize now = 102000
-        Delete from the  middle  : 16 msec                     Delete from the  middle  : 2 msec
+        Delete from the  middle  : 18 msec                     Delete from the  middle  : 1 msec
         ListSize now = 101000                                  ListSize now = 101000
-        Delete from the  end  : 16 msec                        Delete from the  end  : 2 msec
+        Delete from the  end  : 0 msec                        Delete from the  end  : 0 msec
         ListSize now = 100000                                  ListSize now = 100000
 
 
-                        CONCLUSIONS : Linked list is a better choice than the Array list when
-                        you want to remove something from the list but worse in all other operations.
+
 
 
          */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
