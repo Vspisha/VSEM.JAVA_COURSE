@@ -52,5 +52,31 @@ public class MainLab2 {
         System.out.println("The lowest salary : " + lowSallary);
         System.out.println("Average salary : " + midSallary);
 
+      /*  All who have more 5k sallary :
+        [FullTimeW{name='John lenon', workStartDate=2015-05-23, position='TeamLeader',
+         englishLevel='C2', isHaveHigherEducation=true, completedProjectsPerMounth=2},
+
+        FullTimeW{name='Tarja Turunen', workStartDate=2021-01-14, position='Analyst',
+         englishLevel='C1', isHaveHigherEducation=true, completedProjectsPerMounth=1},
+
+        FullTimeW{name='Paul McCartney', workStartDate=2018-12-24, position='Programmer',
+         englishLevel='C1', isHaveHigherEducation=true, completedProjectsPerMounth=1},
+
+        FullTimeW{name='Yoko Ono', workStartDate=2010-01-14, position='Programmer',
+         englishLevel='C1', isHaveHigherEducation=true, completedProjectsPerMounth=1},
+
+        PartTimeW{name='Robert Pattinson', position='Programmer', isHaveHigherEducation=true,
+         englishLevel='C1', workingHoursPerDay=4, workingDaysPerMonth=20, completedProjectsPerMonth=3},
+
+        PartTimeW{name='Kit Harington', position='Analyst', isHaveHigherEducation=false,
+        englishLevel='C1', workingHoursPerDay=5, workingDaysPerMonth=10, completedProjectsPerMonth=3},
+
+        PartTimeW{name='Tom Hardy', position='TeamLeader', isHaveHigherEducation=true,
+        englishLevel='C2', workingHoursPerDay=2, workingDaysPerMonth=18, completedProjectsPerMonth=3}]
+
+        Sum of all salaries : 69580.0
+        The highest salary : 12500.0
+        The lowest salary : 3500.0
+        Average salary : 6958.0*/
     }
 }
