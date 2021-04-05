@@ -104,7 +104,8 @@ public class JavaLists {
 
         start = LocalDateTime.now();
         for (int i = 0; i < 1000; i++) {
-            linkedList.set(linkedList.size() - 1000, random.nextInt(1000));
+            linkedList.set(linkedList.size() - 1, random.nextInt(1000));
+
         }
         finish = LocalDateTime.now();
 
@@ -156,7 +157,7 @@ public class JavaLists {
         List<Integer> arrayList = new ArrayList<>();
         int indexOfCenterA = arrayList.size() / 2;
 
-        // CREATE LIST 100000
+        // CREATE LIST
 
         start = LocalDateTime.now();
         for (int i = 0; i < 100000; i++) {
@@ -297,23 +298,29 @@ public class JavaLists {
         Insert on the end  : 1 msec                            Insert on the end  : 0 msec
         ListSize now = 103000                                  ListSize now = 103000
         --------------------------------------UPDATE-------------------------------------------------------------
-        Update from the  beginning  : 0 msec                   Update from the  beginning  : 1 msec
+        Update from the  beginning  : 0 msec                   Update from the  beginning  : 0 msec
         ListSize now = 103000                                  ListSize now = 103000
-        Update from the  middle  : 0 msec                      Update from the  middle  : 0 msec
+        Update from the  middle  : 0 msec                      Update from the  middle  : 6 msec
         ListSize now = 103000                                  ListSize now = 103000
-        Update from the  end  : 1 msec                         Update from the  end  : 15 msec
+        Update from the  end  : 1 msec                         Update from the  end  : 0 msec
         ListSize now = 103000                                  ListSize now = 103000
         --------------------------------------DELETE--------------------------------------------------------------
-        Delete from the  beginning  : 23 msec                  Delete from the  beginning  : 0 msec
+        Delete from the  beginning  : 23 msec                  Delete from the  beginning  : 1 msec
         ListSize now = 102000                                  ListSize now = 102000
-        Delete from the  middle  : 18 msec                     Delete from the  middle  : 1 msec
+        Delete from the  middle  : 18 msec                     Delete from the  middle  : 14 msec
         ListSize now = 101000                                  ListSize now = 101000
         Delete from the  end  : 0 msec                        Delete from the  end  : 0 msec
         ListSize now = 100000                                  ListSize now = 100000
 
 
-
-
+                   CONCLUSIONS:
+                    1) Normal list creation is faster with a linked list
+                    2) The insertion operation is much faster with the linked list,
+                    but the insertion into the tail is about the same
+                    3) The update operation is about the same level,
+                    but the update from the center of the linked list is worse than the array list
+                    4)The deletion operation at the linked list is much better at the beginning ,
+                    same level from the middle and tail of list
 
          */
 

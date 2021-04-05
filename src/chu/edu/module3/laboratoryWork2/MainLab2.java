@@ -43,7 +43,7 @@ public class MainLab2 {
         double hightSallary = list.stream().mapToDouble(IAccounting::getSallary).max().getAsDouble();
         double lowSallary = list.stream().mapToDouble(IAccounting::getSallary).min().getAsDouble();
         double midSallary = list.stream().mapToDouble(IAccounting::getSallary).average().getAsDouble();
-        System.out.println("All who have more 5k sallary : ");
+        System.out.println("All who have more 5k salary : ");
         List<IAccounting>  more5k = list.stream().filter(item -> item.getSallary() > 5000 )
                 .collect(Collectors.toList());
         System.out.println(more5k);
