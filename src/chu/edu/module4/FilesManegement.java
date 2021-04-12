@@ -58,11 +58,11 @@ public class FilesManegement {
         Number of errors  - 361
 
         ------------------ Use Files.lines.-----------------------------
-        Number of errors  - 361
         Time spent : 1284  mss
+        Number of errors  - 361
+
 
         Conclusions:
-
         Using the "Files.lines" speed increases by about ~ 3 times
 
 
