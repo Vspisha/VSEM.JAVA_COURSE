@@ -52,6 +52,21 @@ public class MainLab2 {
         System.out.println("The lowest salary : " + lowSallary);
         System.out.println("Average salary : " + midSallary);
 
+        double avgPartTimeWSallary = list.stream()
+                .filter(item -> item instanceof PartTimeW)
+                .mapToDouble(IAccounting::getSallary).average().getAsDouble();
+        double avgFullTimeWSallary = list.stream()
+                .filter(item -> item instanceof FullTimeW)
+                .mapToDouble(IAccounting::getSallary).average().getAsDouble();
+
+        if (avgPartTimeWSallary > avgFullTimeWSallary) {
+            System.out.println("The average salary is higher for Part Time Worker (" +
+                    avgPartTimeWSallary + ") than for Full Time Worker (" + avgFullTimeWSallary + ")");
+                }
+        else {
+            System.out.println("The average salary is higher for Full Time Worker ("
+                    + avgFullTimeWSallary + ")  than for Part Time Worker (" + avgPartTimeWSallary +")");
+                }
       /*  All who have more 5k sallary :
         [FullTimeW{name='John lenon', workStartDate=2015-05-23, position='TeamLeader',
          englishLevel='C2', isHaveHigherEducation=true, completedProjectsPerMounth=2},
@@ -77,6 +92,8 @@ public class MainLab2 {
         Sum of all salaries : 69580.0
         The highest salary : 12500.0
         The lowest salary : 3500.0
-        Average salary : 6958.0*/
+        Average salary : 6958.0
+        The average salary is higher for Full Time Worker (7500.0)  than for Part Time Worker (6416.0)
+        */
     }
 }
