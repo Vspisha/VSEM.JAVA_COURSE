@@ -91,7 +91,7 @@ public class Main {
    Without using multithreading the speed of reading and writing the logs with errors on new file ---- 4916 msc.
 
     If i use multithreading the speed between the beginning of the first thread and the end of the last thread
-    ~ 1.5 msc.
+    ~ 1500 msc.
 
     Multithreading is a faster option, but less convenient because of the peculiarities of running in random order.
 
