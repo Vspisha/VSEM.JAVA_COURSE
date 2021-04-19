@@ -22,7 +22,6 @@ public class Duplicates {
             }
         }
         return result;
-
     }
 
     public static void main(String[] args) {

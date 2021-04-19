@@ -40,7 +40,7 @@ public class Glossary {
                 .forEachOrdered(entry -> sorted.put(entry.getKey(), entry.getValue()));
 
         String sorted20 = "----------------------------------------------------------------------------"
-                + "\n" + "VSEM 2021" + "\n"+"Radislav Churkin" + "\n"
+                + "\n" + "VSEM 2021" + "\n"+"Radyslav Churkin" + "\n"
                 + "https://github.com/Vspisha/VSEM.JAVA_COURSE/tree/master/src/chu/edu/TEST" + "\n"
                 + "----------------------------------------------------------------------------" + "\n"
                 + "The first 20 pairs of distinct words "
