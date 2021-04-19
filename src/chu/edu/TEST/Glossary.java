@@ -39,10 +39,12 @@ public class Glossary {
                 .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                 .forEachOrdered(entry -> sorted.put(entry.getKey(), entry.getValue()));
 
-        String sorted20 = "--------------------------------------" + "\n" + "VSEM 2021" + "\n"+"Radislav Churkin" + "\n"
+        String sorted20 = "----------------------------------------------------------------------------"
+                + "\n" + "VSEM 2021" + "\n"+"Radislav Churkin" + "\n"
                 + "https://github.com/Vspisha/VSEM.JAVA_COURSE/tree/master/src/chu/edu/TEST" + "\n"
-                + "--------------------------------------" + "\n" + "The first 20 pairs of distinct words " +
-                "sorted in the DESC mode by the number of occurrence : " + "\n";
+                + "----------------------------------------------------------------------------" + "\n"
+                + "The first 20 pairs of distinct words "
+                + "sorted in the DESC mode by the number of occurrence : " + "\n";
         int counter = 0;
         for (Map.Entry<String, Integer> entry : sorted.entrySet()) {
             counter++;
